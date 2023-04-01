@@ -1,12 +1,12 @@
 timur = input()
 ruslan = input()
-l = ['ящерица', 'камень', 'бумага', 'ножницы', 'Спок']
-n = ['ножницы', 'камень', 'Спок', 'бумага', 'ящерица']
+l = ['lizard', 'rock', 'paper', 'scissors', 'Spock']
+n = ['scissors', 'rock', 'Spock', 'paper', 'lizard']
 if l.index(timur) == l.index(ruslan):
-    print('ничья')
+    print('draw in the game')
 elif l.index(timur) == l.index(ruslan) + 1 or l.index(timur) == l.index(ruslan) - 4:
-    print('Тимур')
+    print('1st player wins!')
 elif n.index(timur) == n.index(ruslan) + 1 or n.index(timur) == n.index(ruslan) - 4:
-    print('Тимур')
+    print('1st player wins!')
 else:
-    print('Руслан')
+    print('2nd player wins!')
