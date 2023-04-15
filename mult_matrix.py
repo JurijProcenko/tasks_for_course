@@ -1,4 +1,4 @@
-# multiplication of two matrices
+# exponentiation of a matrix
 def get_matrix(r, t):
     x = [[0] * t for _ in range(r)]
     for i in range(r):
@@ -6,18 +6,20 @@ def get_matrix(r, t):
     return x
 
 
-n, m = [int(x) for x in input().split()]
-a = get_matrix(n, m)
-input()
-l, k = [int(x) for x in input().split()]
-c = [[0]*k for _ in range(n)]
-if m==l:
-    b = get_matrix(l, k)
+def mult_matrices(a, b):
+    c = [[0] * n for _ in range(n)]
     for i in range(n):
-        for j in range(k):
-            c[i][j]=sum([a[i][s]*b[s][j] for s in range(m)])
-            print(c[i][j], end=' ')
-        print()
+        for j in range(n):
+            c[i][j] = sum([a[i][s] * b[s][j] for s in range(n)])
+    return c
 
-else:
-    print("Sorry, I can't multiply these matrices ")
+
+n = int(input())
+a = get_matrix(n, n)
+l = int(input())
+c = a
+for _ in range(l - 1):
+    c = mult_matrices(c, a)
+for i in range(n):
+    print(*c[i])
+s = input().strip().replace(' ','')
