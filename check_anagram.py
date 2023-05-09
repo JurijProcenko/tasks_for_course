@@ -5,3 +5,4 @@ def make_dict(word:str):
     return d
 
 print('YES' if make_dict(input().lower())==make_dict(input().lower()) else 'NO')
+x=10
