@@ -11,7 +11,7 @@ def bogosort(nums):
         random.shuffle(nums)
     return nums
 
-numbers = list(range(10))
+numbers = list(range(11))
 random.shuffle(numbers)
 print(numbers)
 
